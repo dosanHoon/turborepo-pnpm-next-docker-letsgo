@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  nginx:
+    build:
+      context: ${PROJECT_ROOT}/deploy/nginx
+      dockerfile: ./Dockerfile
+    image: ${NEXUS_URL}/nginx-${ENV}:latest
+    container_name: nginx
+    volumes:
+      # Nginx 로그 파일을 호스트 시스템의 디렉토리로 마운트
+      - ./logs/nginx:/var/log/nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - app

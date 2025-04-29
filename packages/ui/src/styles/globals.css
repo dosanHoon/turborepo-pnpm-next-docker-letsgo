@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tailwind 4에서 추가된 최신 속성 제거 */
+body {
+  height: 100vh; /* ✅ dvh, lvh, svh 대신 vh 사용 */
+  font-size: 14px;
+}
+
+/* AL 디자인 시스템에 정의된 컬러값(light theme) */
+:root {
+  --color-gray-5: #fbfbfb;
+  --color-gray-10: #f8f9f9;
+  --color-gray-30: #f4f5f5;
+  --color-gray-50: #e9eaec;
+  --color-gray-100: #d2d5d8;
+  --color-gray-200: #bcc0c5;
+  --color-gray-300: #a5abb1;
+  --color-gray-400: #8f969e;
+  --color-gray-500: #79828b;
+  --color-gray-600: #626d77;
+  --color-gray-700: #4c5864;
+  --color-gray-800: #354350;
+  --color-gray-900: #1f2e3d;
+
+  --color-blue-50: #f2f7ff;
+  --color-blue-100: #d1e5ff;
+  --color-blue-200: #abceff;
+  --color-blue-300: #7db3ff;
+  --color-blue-400: #599eff;
+  --color-blue-500: #368aff;
+  --color-blue-600: #1275ff;
+  --color-blue-700: #0f63d9;
+  --color-blue-800: #0c51b2;
+  --color-blue-900: #0a408c;
+
+  --color-red-100: #ffdcdc;
+  --color-red-200: #ffc2c2;
+  --color-red-300: #ffa0a0;
+  --color-red-400: #ff8686;
+  --color-red-500: #ff6c6c;
+  --color-red-600: #ff5252;
+  --color-red-700: #d94646;
+  --color-red-800: #b33939;
+  --color-red-900: #8c2d2d;
+
+  --color-background: #ffffff;
+  --color-hover: rgba(31, 46, 61, 0.03);
+  --color-functional-red-600: #ff5252;
+  --color-functional-green-600: #11ca5a;
+}
+.dark {
+  --color-gray-5: #161616;
+  --color-gray-10: #1d1e1f;
+  --color-gray-30: #222324;
+  --color-gray-50: #2c2d2e;
+  --color-gray-100: #3b3c3d;
+  --color-gray-200: #4e4f52;
+  --color-gray-300: #717275;
+  --color-gray-400: #898b8f;
+  --color-gray-500: #9d9fa3;
+  --color-gray-600: #b2b4b8;
+  --color-gray-700: #c6c8cc;
+  --color-gray-800: #dadce0;
+  --color-gray-900: #f7f8fa;
+
+  --color-blue-50: #062959;
+  --color-blue-100: #083473;
+  --color-blue-200: #0a408c;
+  --color-blue-300: #0c51b2;
+  --color-blue-400: #0f63d9;
+  --color-blue-500: #1275ff;
+  --color-blue-600: #368aff;
+  --color-blue-700: #70acff;
+  --color-blue-800: #a8cdff;
+  --color-blue-900: #d6e7ff;
+
+  --color-red-100: #b33939;
+  --color-red-200: #d94646;
+  --color-red-300: #ff5252;
+  --color-red-400: #ff6c6c;
+  --color-red-500: #ff8686;
+  --color-red-600: #ffa0a0;
+  --color-red-700: #ffc2c2;
+  --color-red-800: #ffdcdc;
+  --color-red-900: #fff6f6;
+
+  --color-background: #161616;
+  --color-hover: rgba(247, 248, 250, 0.05);
+}
+
+@layer utilities {
+  /* 스크롤바 전체 스타일 */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* 스크롤바 너비 */
+    height: 8px; /* 가로 스크롤바 높이 */
+  }
+
+  /* 스크롤바 트랙(배경) */
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1a1a1a; /* 어두운 배경 */
+    border-radius: 4px;
+  }
+
+  /* 스크롤바 썸(움직이는 부분) */
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #555; /* 회색 */
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+
+  /* 마우스 오버 시 */
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #888;
+  }
+
+  /* 스크롤바 숨김 (선택 사항) */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
