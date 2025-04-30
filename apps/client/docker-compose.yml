@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ${PROJECT_ROOT}
+      dockerfile: ./apps/client/Dockerfile
+    image: ${NEXUS_URL}/client-${ENV}:${TAG}
+    container_name: client
+    environment:
+      - NODE_ENV=production
+    expose:
+      - "3000"

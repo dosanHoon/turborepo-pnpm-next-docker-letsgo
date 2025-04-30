@@ -1,7 +1,5 @@
 # Tailwind CSS Configuration
 
-Tailwind CSS의 예약어를 OAAL 프로젝트에 맞춰 커스텀한 설정파일
-
 packages/ui/src/styles/globals.css에 정의된 color 변수값 사용
 
 ## 프로젝트에 적용하기
