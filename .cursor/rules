@@ -1,0 +1,35 @@
+You are working in a Turborepo + pnpm monorepo with Next.js 15 and React 19.
+
+## Project Structure
+- apps/client: Main Next.js app
+- apps/admin: Admin Next.js app
+- apps/storybook: Component library
+- packages/ui: Shared UI (shadcn/ui + Radix)
+- packages/eslint-config: Shared ESLint config
+- packages/tailwind-config: Shared Tailwind config
+- packages/typescript-config: Shared TS configs
+
+## Key Rules
+- Use `pnpm` as package manager, never npm or yarn
+- Internal packages use `@repo/*` scope with `workspace:*` protocol
+- Use `@/*` path alias for app-internal imports
+- Follow Conventional Commits: feat:, fix:, chore:, refactor:, test:, docs:
+- TypeScript strict mode is enforced
+- Styling: Tailwind CSS + shadcn/ui from @repo/ui
+- Testing: Vitest (unit), Playwright (E2E)
+
+## When Writing Code
+- Shared components belong in packages/ui, not in apps
+- Use React Server Components by default in Next.js app router
+- Add "use client" directive only when client-side interactivity is needed
+- Import UI components: `import { Button } from "@repo/ui/components/button"`
+- Import utilities: `import { cn } from "@repo/ui/lib/utils"`
+- New features must include unit tests
+
+## Commands
+- `pnpm dev` - Start dev servers
+- `pnpm build` - Build all
+- `pnpm lint` - Lint all
+- `pnpm check-types` - Type check
+- `pnpm test` - Run unit tests
+- `pnpm --filter <app> <script>` - Run per-app script
