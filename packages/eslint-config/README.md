@@ -1,1 +1,1 @@
-# `@on/eslint-config`
+# `@repo/eslint-config`

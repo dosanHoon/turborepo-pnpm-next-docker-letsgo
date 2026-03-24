@@ -1,4 +1,4 @@
-const baseConfig = require("@on/tailwind-config");
+const baseConfig = require("@repo/tailwind-config");
 
 module.exports = {
   darkMode: "class",

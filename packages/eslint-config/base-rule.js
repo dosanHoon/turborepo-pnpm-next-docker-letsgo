@@ -1,6 +1,6 @@
 // base-rules.js
-import importPlugin from "eslint-plugin-import";
-import turboPlugin from "eslint-plugin-turbo";
+import importPlugin from 'eslint-plugin-import';
+import turboPlugin from 'eslint-plugin-turbo';
 
 export const basePlugins = {
   import: importPlugin,
@@ -8,34 +8,26 @@ export const basePlugins = {
 };
 
 export const baseRules = {
-  "turbo/no-undeclared-env-vars": "warn",
-  "import/order": [
-    "error",
+  'turbo/no-undeclared-env-vars': 'warn',
+  'import/order': [
+    'error',
     {
-      groups: [
-        "builtin",
-        "external",
-        "internal",
-        ["sibling", "parent"],
-        "index",
-        "object",
-        "type",
-      ],
+      groups: ['builtin', 'external', 'internal', ['sibling', 'parent'], 'index', 'object', 'type'],
       pathGroups: [
         {
-          pattern: "@/**",
-          group: "internal",
+          pattern: '@/**',
+          group: 'internal',
         },
         {
-          pattern: "@on/**",
-          group: "internal",
-          position: "after",
+          pattern: '@repo/**',
+          group: 'internal',
+          position: 'after',
         },
       ],
-      pathGroupsExcludedImportTypes: ["builtin"],
-      "newlines-between": "always",
+      pathGroupsExcludedImportTypes: ['builtin'],
+      'newlines-between': 'always',
       alphabetize: {
-        order: "asc",
+        order: 'asc',
         caseInsensitive: true,
       },
     },

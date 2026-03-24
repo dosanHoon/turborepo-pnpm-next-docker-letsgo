@@ -1,9 +1,9 @@
 {
-  "extends": "@on/typescript-config/react-library.json",
+  "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@on/ui/*": ["./src/*"]
+      "@repo/ui/*": ["./src/*"]
     },
     "module": "ESNext", // ESM을 사용
     "moduleResolution": "bundler", // ESM 규칙을 엄격히 따름

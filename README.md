@@ -22,10 +22,10 @@ turborepo + pnpm + next + docker 렛츠고
 
 ## Packages
 
-- `@on/ui`: 공통 UI
-- `@on/eslint-config`: 공통 `eslint` configurations
-- `@on/tailwind-config`: 공통 `tailwind.config` configurations
-- `@on/typescript-config`: 공통 `tsconfig.json` configurations
+- `@repo/ui`: 공통 UI
+- `@repo/eslint-config`: 공통 `eslint` configurations
+- `@repo/tailwind-config`: 공통 `tailwind.config` configurations
+- `@repo/typescript-config`: 공통 `tsconfig.json` configurations
 
 # CI/CD
 
