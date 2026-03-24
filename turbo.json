@@ -3,10 +3,7 @@
   "globalDependencies": [".env"],
   "tasks": {
     "build": {
-      "env": [
-        "NEXTAUTH_URL",
-        "NEXTAUTH_SECRET"
-      ],
+      "env": ["NEXTAUTH_URL", "NEXTAUTH_SECRET"],
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**"]
@@ -16,6 +13,15 @@
     },
     "check-types": {
       "dependsOn": ["^check-types"]
+    },
+    "test": {
+      "cache": false,
+      "persistent": true
+    },
+    "test:run": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "vitest.config.*", "e2e/**", "playwright.config.*"],
+      "outputs": ["coverage/**"]
     },
     "dev": {
       "cache": false,
