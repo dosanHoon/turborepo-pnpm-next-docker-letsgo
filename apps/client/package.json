@@ -16,12 +16,12 @@
   "dependencies": {
     "@repo/ui": "workspace:*",
     "next": "15.3.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@playwright/test": "^1.58.2",
+    "@playwright/test": "^1.59.1",
     "@repo/eslint-config": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
@@ -35,7 +35,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "jsdom": "^29.0.1",
+    "jsdom": "^29.0.2",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^3.1.2"
